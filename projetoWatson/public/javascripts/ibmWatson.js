@@ -12,7 +12,7 @@ function sendMessageToAssistant() {
     if (textMessage === undefined || textMessage === '')
         textMessage = '';
     else //exibe a mensagem na tela
-        chat.innerHTML += 'Você -->' + textMessage + '<br>';
+        chat.innerHTML += 'You -->' + textMessage + '<br>';
 
     //limpa o campo input;
     document.chatForm.textMessage.value = '';
@@ -27,7 +27,7 @@ function sendMessageToAssistant() {
             // caso os dados tenham retornado com sucesso
             else {
                 // exibe retorno da API e recupera o contexto para o proximo diálogo
-                chat.innerHTML += 'ChatBot --> ' + returnedData.data.result.output.text + '<br>';
+                chat.innerHTML += 'Teacher --> ' + returnedData.data.result.output.text + '<br>';
                 contextDialog = JSON.stringify(returnedData.data.result.context);
             }
         }
