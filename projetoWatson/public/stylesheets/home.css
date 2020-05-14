@@ -17,6 +17,10 @@
     margin: 5px auto;
     border-radius: 5px;
 }
+.menu-container .treinamentos a{
+    text-decoration: none;
+    color: black;
+}
 
 .descrição{
     padding: 5px;
