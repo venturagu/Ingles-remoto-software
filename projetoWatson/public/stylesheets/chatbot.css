@@ -1,0 +1,73 @@
+
+
+#chat{line-height: 1.5;}
+
+input{
+  font: 400 16px Roboto, sans-serif;
+}
+
+input[type=button] {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(3, 16, 158);
+}
+
+input:focus {
+  border-color: rgb(128, 133, 224);
+}
+
+form input {
+  width: 100%;
+  border: 1px solid #dcdce6;
+  border-radius: 8px;
+  padding: 10px 24px;
+}
+
+.chat-container{
+  width: 100%;
+ 
+}
+
+.chat-container section.dialog{
+  width: 100%;
+  margin-left:0px;
+  padding: 10px;
+  max-height: 65vh;
+  overflow-y: auto;
+  
+  border-radius: 8px;
+  display: flex;
+}
+
+form.chatForm{
+  position:fixed;
+  width: 100%;
+  bottom:0;
+  padding-bottom: 30px;
+  display: flex;
+}
+
+form.chatForm input + input{
+  margin-left:0px;
+  border-radius: 10px;
+  transition: filter 0.1s;
+  margin-right: 20px;
+
+flex: 3;
+}
+
+form.chatForm input + input:hover{
+  filter: brightness(85%);
+}
+
+@media (max-width: 600px){
+  .header{justify-content: center;}
+  .header h1{margin-left: 10px; padding: 5px;}
+  .chat-container section.dialog{max-height: 60vh;}
+}
+
+#chat{display: flex; flex-direction: column; max-width: 1200px; margin: 0 auto;}
+#chat div{background-color: white; margin-bottom: 15px; border-radius: 10px; padding: 10px; max-width: 100%; overflow-wrap: anywhere;}
+.you{align-self: flex-end;}
+.teacher{align-self: flex-start;}
+.bold{font-weight: bold;}

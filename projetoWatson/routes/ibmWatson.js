@@ -29,4 +29,27 @@ router.post('/assistant', function (req, res, next) {
     );
 });
 
+router.get('/textToSpeech', async (req, res, next) => {
+    try{
+        //constrói json para envio dos dados ao serviço
+        var params = {
+            text: req.query.text,
+            accept: 'audio/mp3',
+            voice: 'en-US_MichaelVoice'
+        };
+        //envia os dados ao serviço e armazena o retorno no objeto result
+        const {result} = await ibmWatson.textToSpeech.synthesize(params);
+        result.on('response', (response) => {
+            //disponibiliza audio para o front-end
+            response.headers['content-disposition'] = `attachment;
+            filename=transcript.audio%2Fmp3`;
+        });
+        result.on('error', next);
+        result.pipe(res);
+    }
+    catch(error){
+        res.send(error);
+    }
+});
+
 module.exports = router;

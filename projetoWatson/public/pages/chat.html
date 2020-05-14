@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatile" content="ie=edge">
+    <title>Inglês Remoto Soft - Conversation </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../stylesheets/geral.css" type="text/css">
+    <link rel="stylesheet" href="../stylesheets/chatbot.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../javascripts/ibmWatson.js"></script>
+    
+</head>
+
+<body>
+
+    <header class="header">
+        <img src="../images/ingles_remoto_soft_logo.png" alt="ingles remoto soft logo" class="header-logo">
+        <h1>Let's talk</h1>
+    </header>
+
+    <div class="chat-container">
+
+        <section class="dialog">
+            <div id="chat"></div>
+        </section>
+
+        <form class="chatForm" name="chatForm" method="post">
+            <input type="text" placeholder="Answer ..." name="textMessage" />
+            <input type="button" onclick="sendMessageToAssistant();" value="&#xf101;" style="font-family: FontAwesome" />
+        </form>
+    </div>
+
+</body>
+
+</html> 

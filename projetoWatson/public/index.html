@@ -1,41 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatile" content="ie=edge">
-    <title>Inglês Remoto Soft - Conversation </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
-    <link rel="stylesheet" href="./global.css" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Font+Name">
+    <title>Inglês Remoto Soft - Aprenda inglês através da tecnologia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./javascripts/ibmWatson.js"></script>
-
+    <link rel="stylesheet" href="stylesheets/geral.css" type="text/css">
+    <link rel="stylesheet" href="stylesheets/home.css" type="text/css">
 </head>
 
 <body>
-
     <header class="header">
-        <img src="./images/ingles_remoto_soft_logo.png" alt="ingles remoto osoft logo" class="header-logo">
-        <h1>Let's talk</h1>
-        <br>
+        <img src="./images/ingles_remoto_soft_logo.png" alt="ingles remoto soft logo" class="header-logo">
+        <h1>Aprenda inglês </h1>
     </header>
-    
-    <div class="chat-container">
+</body>
 
-        <section class="dialog">
-            <div id="chat"></div>
+<main>
+    <div class="menu-container">
+        <section class="descrição">
+            <h1>Aprenda inglês com a utilização da tecnologia</h1>
+            <h2>Treine conversação, escrita, pronúncia e ouvido</h2>
         </section>
-        
-        <form class="chatForm" name="chatForm" method="post">
-            <input type="text" placeholder="Answer ..." name="textMessage" />
-            <input type="button" onclick="sendMessageToAssistant();" value="&#xf101;"
-                style="font-family: FontAwesome" />
-        </form>
+
+        <section class="treinamentos">
+            <a href="#"><div class="content">
+                <img src="https://image.flaticon.com/icons/svg/1945/1945984.svg" alt="Icone treinar pronúncia e ouvido">
+                <h1>Treine</h1>
+                <p>Pronounce & Lisining</p>
+            </div></a>
+            
+            <a href="./pages/chat.html">
+            <div class="content">
+                <img src="https://image.flaticon.com/icons/svg/2728/2728279.svg" alt="Icone conversação por chatbot">
+                <h1>Treine</h1>
+                <p>Conversation with ChatBot</p>
+            </div></a>
+
+            <a href="./pages/speetch.html">
+            <div class="content">
+                <img src="https://image.flaticon.com/icons/svg/2733/2733739.svg" alt="Icone treinar escrita">
+                <h1>Treine</h1>
+                <p>Translate & Writing</p>
+            </div></a>
+        </section>
     </div>
 
-</body>
+</main>
 
 </html>
