@@ -1,0 +1,92 @@
+.menu-container{
+    width: 100%;
+    
+    padding: 5%;
+    display: flex;
+    
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: url("../images/banner-1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(12, 47, 88);
+    
+    margin: 5px auto;
+    border-radius: 5px;
+}
+
+.descrição{
+    padding: 5px;
+    margin-bottom: 10px;
+    color: white;
+}
+.descrição h1{
+    padding: 5px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.descrição h2{
+    padding: 5px;
+    font-weight: lighter; 
+    font-size: large;
+    letter-spacing: 3px;
+}
+.menu-container .treinamentos
+{
+    
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+    flex-wrap: wrap;
+    
+    justify-content: space-evenly;
+    
+    
+}
+
+.treinamentos .content {
+    width: 120px;
+    height: 100%;
+
+    padding: 5px;
+    
+    background: white;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 5px 0;
+
+}
+.treinamentos .content img{
+    width: 50px;
+    height: 50px;
+}
+
+.treinamentos .content h1{
+    font-weight: 400;
+    font-size: small;
+    padding-top: 5px;
+    overflow-wrap: anywhere;
+    text-transform: uppercase;
+    
+}
+
+.treinamentos .content p{
+    
+    font-weight: 600;
+    font-size: medium;
+    padding: 5px;
+    overflow-wrap: anywhere;
+}
