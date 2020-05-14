@@ -16,7 +16,7 @@
   .header {
     padding: 10px calc((100% - 1200px)/2);
     border-bottom: 5px solid white;
-    background-color: rgb(12, 47, 88);
+    background-color: rgb(25, 40, 124);
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -35,5 +35,4 @@
     font-size: 32px;
     color: white;
     margin-right: 10px;
-    text-transform: uppercase;
   }

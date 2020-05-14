@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
+var multer = require('multer');
+var upload = multer();
 //recupera configurações de acesso aos serviços IBM Watson
 const ibmWatson = require('../lib/ibmWatsonCredentials');
 
@@ -51,5 +53,26 @@ router.get('/textToSpeech', async (req, res, next) => {
         res.send(error);
     }
 });
+
+router.post('/speechToText', upload.single('audioFile'), function (req, res, next){
+	var audioStream = req.file;
+	var params = {
+		audio: audioStream.buffer,
+		contentType: 'audio/l16; rate=44100',
+		interim_results: true,
+		model: 'en-US_NarrowbandModel'
+	};
+	console.log(params);
+	
+	ibmWatson.speechToText.recognize(params, function (error,response){
+		if(error)
+			res.json({ status: 'ERRO', data: error.code + ' - ' + error.toString() });
+		else {
+		console.log(JSON.stringify(response.result, null, 2));
+		res.json({ status: 'OK', data: response });
+		}
+	});
+});
+
 
 module.exports = router;
