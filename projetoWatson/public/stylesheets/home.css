@@ -20,6 +20,12 @@
 .menu-container .treinamentos a{
     text-decoration: none;
     color: black;
+    margin: 5px 0;
+}
+
+.menu-container .treinamentos a:hover{
+    box-shadow: 1px 1px 20px -10px rgb(239, 242, 247);
+    transition: 200ms;
 }
 
 .descrição{
@@ -39,21 +45,18 @@
     font-size: large;
     letter-spacing: 3px;
 }
+
 .menu-container .treinamentos
 {
-    
     width: 100%;
 
     display: flex;
     align-items: center;
-    justify-content: center;
     
 
     flex-wrap: wrap;
     
     justify-content: space-evenly;
-    
-    
 }
 
 .treinamentos .content {
@@ -69,8 +72,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-
-    margin: 5px 0;
 
 }
 .treinamentos .content img{
@@ -88,9 +89,103 @@
 }
 
 .treinamentos .content p{
-    
     font-weight: 600;
     font-size: medium;
     padding: 5px;
     overflow-wrap: anywhere;
 }
+
+.serviços-container {
+    width: 100%;
+
+    display: flex;
+    
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+.serviços-container h1{
+    color: rgb(12, 47, 88);
+    font-weight: bold;
+    font-size: x-large;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+    padding: 10% 0;
+}
+
+.serviços-container  p, a{
+    color: rgb(31, 31, 31);
+    font-weight: 500;
+    font-size: large;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+    line-height: 1.5;
+    padding: 5px 0;
+}
+
+.serviços-container  a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.serviços-container  .content a:hover{
+    color: rgb(12, 47, 88);
+    transition: 400ms;
+}
+
+.serviços-container  img {width: 40%;flex-wrap: wrap;box-shadow: 1px 1px 25px -10px rgb(12, 47, 88);}
+
+.serviços-container .content .img_right{border-radius: 70px 20px; margin-right: 10px;}
+
+.serviços-container .content .img_left{border-radius: 20px 70px; margin-left: 10px;}
+
+.serviços-container .content {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+
+.serviços-container .content section{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;  
+}
+
+#last{
+    text-align: justify;
+     
+}
+
+#conversasao{
+    padding: 5px;
+}
+#last h1{
+    text-align: center;
+}
+
+@media (max-width: 570px){
+    .serviços-container {display: block;width: 100%;}
+    .serviços-container .content{justify-content: center;flex-wrap: wrap;margin: 0;padding: 0;}
+    .serviços-container .content .img_right{margin: 10px 0;}
+    .serviços-container .content .img_left{margin: 10px 0;border-radius: 70px 20px;}
+    .serviços-container .content img{width: 300px; margin: 10px 0;}
+    .serviços-container .content section{width: 100%;}
+}
+
+
+
+
