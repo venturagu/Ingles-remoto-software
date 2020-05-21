@@ -1,5 +1,6 @@
 const AssistantV1 = require('ibm-watson/assistant/v1');
 const TextToSpeechV1 = require('ibm-watson/text-to-speech/v1');
+const SpeechToTextV1 = require('ibm-watson/speech-to-text/v1');
 const {IamAuthenticator} = require('ibm-watson/auth');
 
 //configuração para IBM-Watson Assistsnt
@@ -14,4 +15,9 @@ const textToSpeech = new TextToSpeechV1({
     url: 'https://stream.watsonplatform.net/text-to-speech/api/'
 });
 
-module.exports = {assistant, textToSpeech};
+const speechToText = new SpeechToTextV1({
+	authenticator: new IamAuthenticator({apikey: 'rm3lWd0sqjfLw0ozAAqvw0K3lS5ZlP8rPUR7_mEYXvm0'}),
+	url: 'https://stream.watsonplatform.net/speech-to-text/api'
+});
+
+module.exports = {assistant, textToSpeech, speechToText};
