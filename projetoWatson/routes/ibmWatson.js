@@ -74,5 +74,24 @@ router.post('/speechToText', upload.single('audioFile'), function (req, res, nex
 	});
 });
 
+// post para o serviço : IBM Watson Language Translator 
+router.post('/languageTranslator', function (req, res, next){
+	const translateParams = {
+        text: req.body.text,
+        modelId: 'en-pt',
+        source: 'English',
+        target: 'Portuguese',
+      };
+	console.log(translateParams);
+    
+	ibmWatson.languageTranslatorV3.translate(translateParams, function (error,response){
+		if(error)
+			res.json({ status: 'ERRO', data: error.code + ' - ' + error.toString() });
+		else {
+		console.log(JSON.stringify(response.result, null, 2));
+		res.json({ status: 'OK', data: response });
+		}
+	});
+});
 
 module.exports = router;
