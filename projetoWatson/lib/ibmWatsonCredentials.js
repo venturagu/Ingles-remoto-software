@@ -2,6 +2,7 @@ const AssistantV1 = require('ibm-watson/assistant/v1');
 const TextToSpeechV1 = require('ibm-watson/text-to-speech/v1');
 const SpeechToTextV1 = require('ibm-watson/speech-to-text/v1');
 const LanguageTranslatorV3 = require('ibm-watson/language-translator/v3');
+const VisualRecognitionV3 = require('ibm-watson/visual-recognition/v3');
 const {IamAuthenticator} = require('ibm-watson/auth');
 
 //configuração para IBM-Watson Assistsnt
@@ -26,5 +27,13 @@ const languageTranslatorV3 = new LanguageTranslatorV3({
 	authenticator: new IamAuthenticator({apikey: 'bIAoYwL0bwP5zxCZmXPCfdIuGoHC057MrjQp21oo8TNv'}),
 	url: 'https://stream.watsonplatform.net/language-translator/api'
 });
+//configuração para o IBM Watson Visual Recognition
+const visualRecognition = new VisualRecognitionV3({
+    version: '2020-05-08',
+    authenticator: new IamAuthenticator({
+      apikey: '1mqiCBTMQhEKNDbTtxCbSNI4690x14pVyRXo9jwyaCud',
+    }),
+    url: 'https://stream.watsonplatform.net/visual-recognition/api',
+  });
 
-module.exports = {assistant, textToSpeech, speechToText, languageTranslatorV3};
+module.exports = {assistant, textToSpeech, speechToText, languageTranslatorV3, visualRecognition};

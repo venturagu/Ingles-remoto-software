@@ -3,6 +3,8 @@ var router = express.Router();
 
 var multer = require('multer');
 var upload = multer();
+const multerConfig = require('../config/multer');
+const fs = require('fs');
 //recupera configurações de acesso aos serviços IBM Watson
 const ibmWatson = require('../lib/ibmWatsonCredentials');
 
@@ -54,6 +56,7 @@ router.get('/textToSpeech', async (req, res, next) => {
     }
 });
 
+// post para o serviço : IBM Watson Speech To Text
 router.post('/speechToText', upload.single('audioFile'), function (req, res, next){
 	var audioStream = req.file;
 	var params = {
@@ -92,6 +95,27 @@ router.post('/languageTranslator', function (req, res, next){
 		res.json({ status: 'OK', data: response });
 		}
 	});
+});
+
+// post para o serviço : IBM Watson Visual Recognition 
+router.post('/visualRecognition', multer(multerConfig).single('file'), function (req, res){
+    var imageStream = req.file;
+    console.log(req.file);
+
+	var classifyParams = {
+        imagesFile: fs.createReadStream(imageStream.path),
+        owners: ['IBM'],
+      };
+	console.log(classifyParams);
+	
+	ibmWatson.visualRecognition.classify(classifyParams, function (error, response){
+		if(error)
+			res.json({ status: 'ERRO', data: error.code + ' - ' + error.toString() });
+		else {
+		    console.log(JSON.stringify(response.result, null, 2));
+		    res.json({ status: 'OK', data: response });
+		}
+    });
 });
 
 module.exports = router;
