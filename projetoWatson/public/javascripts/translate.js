@@ -35,5 +35,3 @@ $(document).keypress(
     }
 );
 
-//após carregar todos os recurso da página, faz post para o serviço
-// para exibir mensagem de boas vidas do chat
