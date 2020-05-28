@@ -1,8 +1,14 @@
 const uploadForm = document.querySelector('upload');
+const file = document.getElementById('file');
+
+const previewContainer = document.getElementById('image-preview');
+const previewImage = previewContainer.querySelector('.image-preview__image');
+const previewText = previewContainer.querySelector('.image-preview__text');
+
 answer = document.getElementById('answer');
 
 function sendFileToRecognition(){
-   let file = document.getElementById('file');
+   
    console.log(file.files[0]);
 
    let formData = new FormData()
@@ -32,10 +38,33 @@ function sendFileToRecognition(){
 });
 
 }
-$(document).ready(
+$(document).keypress(
     function (event) {
         if (event.which == '13') {
             event.preventDefault();
             sendFileToRecognition();
         }
+    }
+);
+file.addEventListener("change", function() {
+
+    if(file.files[0]) {
+        const reader = new FileReader();
+        
+        previewText.style.display = "none";
+        previewImage.style.display = "block";
+        console.log('eu');
+        reader.addEventListener("load", function() {
+            previewImage.setAttribute("src", this.result);
+        });
+
+        reader.readAsDataURL(file.files[0]);
+    }
 });
+// $(document).ready(
+//     function (event) {
+//         if (event.which == '13') {
+//             event.preventDefault();
+//             sendFileToRecognition();
+//         }
+// });
