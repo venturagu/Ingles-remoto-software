@@ -4,4 +4,52 @@
 .container-text input{width: 80%; outline: none; background: rgba(35, 60, 139, 0.1); border: none;}
 .container-text button{width: 20%; border: none; background: rgba(35, 60, 139, 0.1); margin-left: 5px; cursor: pointer; padding: 5px;}
 .container-text button i {margin-left: 3px;}
-.aviso{position: absolute; bottom: 20px; text-align: center;}
+
+.image-preview {
+    margin-top: 20px;
+    width: 100%;
+    min-width: 100px;
+    border: 2px solid rgb(12, 47, 88);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: rgb(12, 47, 88, 0.7);
+}
+
+.image-preview__image{display: none;width: 100%;}
+
+input[type="file"]{display: none;}
+
+label{
+    width: 40%;
+    font-weight: bold;
+    padding: 8px 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: rgb(12, 47, 88);
+    cursor: pointer;
+}
+label:hover {transition: 200ms;filter: brightness(140%);}
+
+.upload span {
+    width: 60%;
+    min-height: 2em;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(12, 47, 88, 0.7);
+    background: white;
+    text-align: center;
+    padding: 1px 10px;
+    border: 1px solid rgb(12, 47, 88);
+    margin-left: 5px;
+}
+.upload button i {color: white}
+.upload button{background: rgb(12, 47, 88);}
+.upload button:hover{transition: 200ms;filter: brightness(140%);}

@@ -21,10 +21,20 @@
 
     <div class="container-text">
         <h2>Envie uma imagem de algo e descubra como seria a palavra no inglês</h2>
-        <form name="upload" method="post">
-            <input type="file" name="uploadFile" id="file" size="100px" required />
-            <button type="button" onclick="sendFileToRecognition();"><i class="fas fa-arrow-right"></i></i> </button>
+        <form class="upload" name="upload" method="post">
+            <input type="file" name="uploadFile" id="file" size="100px" accept="image/x-png,image/gif,image/jpeg,image/tiff" required />
+            
+            <label for="file">
+                <i class="fas fa-plus-square"></i>&nbsp;Escolha uma imagem
+            </label>
+            <span>(.gif, .jpg, .png, .tif) e tamanho máximo de 10 MB.</span>
+            <button type="button" onclick="sendFileToRecognition();"><i class="fas fa-arrow-right"></i> </button>
         </form>
+
+        <div class="image-preview" id="image-preview">
+            <img src="" alt="Pré-visualização de imagem" class="image-preview__image">
+            <span class="image-preview__text">Pré-visualização da imagem</span>
+        </div>
 
         <section class="Vocabulary">
             <div id="answer"></div>
