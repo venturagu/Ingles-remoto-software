@@ -53,7 +53,6 @@ file.addEventListener("change", function() {
         
         previewText.style.display = "none";
         previewImage.style.display = "block";
-        console.log('eu');
         reader.addEventListener("load", function() {
             previewImage.setAttribute("src", this.result);
         });
