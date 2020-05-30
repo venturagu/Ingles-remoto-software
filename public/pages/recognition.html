@@ -20,7 +20,7 @@
     </header>
 
     <div class="container-text">
-        <h2>Envie uma imagem de algo e descubra como seria a palavra no inglês</h2>
+        <h2>Envie uma imagem de algo e descubra palavras que estão relacionadas na imagem em inglês</h2>
         <form class="upload" name="upload" method="post">
             <input type="file" name="uploadFile" id="file" size="100px" accept="image/x-png,image/gif,image/jpeg,image/tiff" required />
             
@@ -31,14 +31,25 @@
             <button type="button" onclick="sendFileToRecognition();"><i class="fas fa-arrow-right"></i> </button>
         </form>
 
-        <div class="image-preview" id="image-preview">
-            <img src="" alt="Pré-visualização de imagem" class="image-preview__image">
-            <span class="image-preview__text">Pré-visualização da imagem</span>
-        </div>
+        <section>
+            <div class="image-preview" id="image-preview">
+                <img src="" alt="Pré-visualização de imagem" class="image-preview__image">
+                <span class="image-preview__text">Pré-visualização da imagem</span>
+            </div>
 
-        <section class="Vocabulary">
-            <div id="answer"></div>
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Classificação</th>
+                        <th>Pontuação</th>
+                    </tr>
+                </thead>
+                <tbody id="answer">
+
+                </tbody>
+            </table>
         </section>
+         
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"

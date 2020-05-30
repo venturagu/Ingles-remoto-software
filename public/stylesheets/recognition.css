@@ -1,4 +1,4 @@
-.container-text{background-color: white; padding: 20px; border-radius: 15px; max-width: 600px; margin: 0 auto; margin-top: 20px;}
+.container-text{background-color: white; padding: 20px; border-radius: 15px; max-width: 750px; margin: 0 auto; margin-top: 20px;}
 .container-text form{display: flex;}
 .container-text h2{text-align: center; font-size: 1em; margin-bottom: 10px;}
 .container-text input{width: 80%; outline: none; background: rgba(35, 60, 139, 0.1); border: none;}
@@ -6,11 +6,12 @@
 .container-text button i {margin-left: 3px;}
 
 .image-preview {
-    margin-top: 20px;
-    width: 100%;
+    margin: 20px auto;
+    width: 70%;
     min-width: 100px;
     border: 2px solid rgb(12, 47, 88);
-
+    
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,8 +44,8 @@ label:hover {transition: 200ms;filter: brightness(140%);}
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(12, 47, 88, 0.7);
-    background: white;
+    color: rgb(12, 47, 88, 0.8);
+    background-color: rgba(35, 60, 139, 0.1);
     text-align: center;
     padding: 1px 10px;
     border: 1px solid rgb(12, 47, 88);
@@ -53,3 +54,48 @@ label:hover {transition: 200ms;filter: brightness(140%);}
 .upload button i {color: white}
 .upload button{background: rgb(12, 47, 88);}
 .upload button:hover{transition: 200ms;filter: brightness(140%);}
+
+.content-table {
+    width: 70%;
+    border-collapse: collapse;
+    font-size: 1.5em;
+    background-color: rgba(35, 60, 139, 0.1);
+    box-shadow: 1px 1px 20px -10px black;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0px;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+
+.content-table thead tr {
+    background-color: rgb(12, 47, 88) ;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-table th,
+.content-table tr {
+    padding: 4px 5px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: rgb(12, 47, 88, 0.1);
+}
+
+.content-table tbody tr:hover {
+    filter: brightness(120%);
+}
+
+@media (max-width: 470px) {
+    .content-table{width:100%}
+    .content-table thead tr{display: flex;flex-wrap: wrap;}
+    .content-table th,
+    .content-table tr{flex-direction: column;}
+}

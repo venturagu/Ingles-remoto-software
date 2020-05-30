@@ -7,6 +7,7 @@ const previewText = previewContainer.querySelector('.image-preview__text');
 
 answer = document.getElementById('answer');
 
+
 function sendFileToRecognition(){
    
    console.log(file.files[0]);
@@ -29,9 +30,26 @@ function sendFileToRecognition(){
         else {
             if(returnedData.data.result.images[0] != undefined) {
                 console.log(returnedData);
-                answer.innerHTML += "<div>"+returnedData.data.result.images[0].classifiers[0].classes[0].class+" </div>";
-                answer.innerHTML += "<div>"+returnedData.data.result.images[0].classifiers[0].classes[1].class+" </div>";
-                answer.innerHTML += "<div>"+returnedData.data.result.images[0].classifiers[0].classes[2].class+" </div>";
+
+                /**
+                 * Remove todos elementos filhos do corpo da 
+                   tabela quando o usuario realizar um novo upload de imagem
+                 */
+                while(answer.firstChild)
+                {
+                    answer.removeChild(answer.firstChild);
+                }
+                
+                //Adiciona elementos na tabela
+                let i = 0;
+
+                while(returnedData.data.result.images[0].classifiers[0].classes[i] != undefined){
+                    answer.innerHTML += "<tr><td>"+returnedData.data.result.images[0].classifiers[0].classes[i].class+" </td>" + 
+                                        "<td>"+returnedData.data.result.images[0].classifiers[0].classes[i].score+" </td></tr>";
+                    i++;
+                }
+                
+                
             }
         }
     }
@@ -60,10 +78,3 @@ file.addEventListener("change", function() {
         reader.readAsDataURL(file.files[0]);
     }
 });
-// $(document).ready(
-//     function (event) {
-//         if (event.which == '13') {
-//             event.preventDefault();
-//             sendFileToRecognition();
-//         }
-// });
