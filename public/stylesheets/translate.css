@@ -1,0 +1,12 @@
+.container-text{background-color: white; padding: 20px; border-radius: 15px; max-width: 600px; margin: 0 auto; margin-top: 20px; height: 280px}
+.container-text form{display: flex;}
+.container-text h2{text-align: center; font-size: 1em; margin-bottom: 10px;}
+.container-text h1{font-size: 1.5em}
+.container-text textarea{width: 80%; outline: none; background: rgba(35, 60, 139, 0.1); border: none; height: 200px;}
+.container-text button{width: 20%; border: none; background: rgb(12, 47, 88); margin-left: 5px; cursor: pointer; padding: 5px; height: 50px}
+.container-text button i {margin-left: 3px;color: white;}
+.aviso{position: absolute; bottom: 20px; text-align: center;}
+.right-container-text{flex: 1;}
+.left-container-text{flex: 0 0 50%;}
+.wrapper{display: flex;}
+#answer{height:200px; background: rgba(35, 60, 139, 0.1); width:100%}

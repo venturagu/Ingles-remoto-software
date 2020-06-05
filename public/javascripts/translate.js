@@ -1,6 +1,6 @@
 function sendTextToTranslate() {
     //Recupera mensagem digitada pelo usuário
-    var textMessage = document.textForm.textMessage.value;
+    var textMessage = document.getElementById("texto").value;
     answer = document.getElementById('answer');
 
     $.post("/ibmWatson/languageTranslator",
