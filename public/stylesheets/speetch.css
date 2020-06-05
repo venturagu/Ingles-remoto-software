@@ -1,7 +1,8 @@
-.container-text{background-color: white; padding: 20px; border-radius: 15px; max-width: 600px; margin: 0 auto; margin-top: 20px;}
-.container-text form{display: flex;}
-.container-text h2{text-align: center; font-size: 1em; margin-bottom: 10px;}
+.container-text{background-color: white;  border-radius: 15px; max-width: 600px; margin: 0 auto; margin-top: 20px;}
+.container-text form{display: flex;padding: 20px;}
+.container-text h2{text-align: center; font-size: 1em;padding: 20px;}
 .container-text input{width: 80%; outline: none; background: rgba(35, 60, 139, 0.1); border: none;}
 .container-text button{width: 20%; border: none; background: rgb(12, 47, 88); margin-left: 5px; cursor: pointer; padding: 5px;}
 .container-text button i {margin-left: 3px; color:white;}
-.aviso{position: absolute; bottom: 20px; text-align: center;}
+.container-text button:hover{transition: 200ms;filter: brightness(140%);}
+.aviso{position: fixed; bottom: 20px; text-align: center;left: 0;width: 100%;}
