@@ -35,4 +35,10 @@
     font-size: 32px;
     color: white;
     margin-right: 10px;
+    text-align: center;
+  }
+
+  @media (max-width: 600px){
+    .header{justify-content: center;}
+    .header h1{margin-left: 10px; padding: 5px;}
   }

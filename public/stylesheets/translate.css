@@ -1,7 +1,12 @@
- h2{
-    background-color: aqua;   
+ #title{
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(12, 47, 88);
+    letter-spacing: 1px;
+    text-align: center; 
 }
-.container-text{background-color: white; padding: 20px; border-radius: 15px; margin: 0 auto; margin-top: 20px; height: 280px;}
+.container-text{background-color: white; padding: 20px; border-radius: 15px; margin: 0 auto;height: 280px;}
 .container-text form{display: flex;height: 200px;}
 .container-text h2{text-align: center; font-size: 1em; margin-bottom: 10px;}
 .container-text h1{font-size: 1.5em}
@@ -19,15 +24,15 @@
     padding: 20px;
 }
 
-.container-text textarea:focus{
-    border: 2px solid rgb(12, 47, 88);
-}
-.wrapper{display: flex;justify-content: center;align-items: center;}
+.container-text textarea:focus{border: 2px solid rgb(12, 47, 88);}
+.wrapper{display: flex;justify-content: center;align-items: center;flex-direction: column;}
+main{display: flex;flex-direction: row;}
 .wrapper button{width: 20%; border: none; background: rgb(12, 47, 88);  cursor: pointer; 
-    padding: 5px;box-sizing: border-box;border-radius: 16px;height: 48px;width: 20px;margin: 0px 5px;}
+    padding: 5px;box-sizing: border-box;border-radius: 16px;height: 48px;width: 20px;margin: auto 5px;}
 .wrapper button i {color: white;}
-.right-container-text{flex: 1;}
-.left-container-text{flex: 1;}
+.wrapper button:hover{transition: 200ms;filter: brightness(140%);}
+.right-container-text{flex: 1;margin-top: 20px;}
+.left-container-text{flex: 1;margin-top: 20px;}
 
 #answer{
     height:200px; 
@@ -40,6 +45,12 @@
     line-height: 1.5;
     color: rgb(102, 101, 101);
     font-size: 2em;
+}
+
+@media (max-width: 600px){
+    main{flex-direction: column;}
+    .wrapper button{margin: 5px auto;width: 25%;height: 25px;}
+    .right-container-text{margin-top: 0px;}
 }
 
 
