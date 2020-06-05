@@ -22,27 +22,29 @@
         <h1>Translate and Writing</h1>
     </header>
 
-	
-	<div class="wrapper">
-	<div class="left-container-text">
-		<div class="container-text">
-			<h2>Digite uma palavra ou frase em inglês para traduzi-la ao português </h2>
-			<form name = "textForm" method = "post">
-				<textarea name="Text1" cols="40" rows="5" id = "texto" name = "textMessage"></textarea>
-				<button type = "button" onclick="sendTextToTranslate();"><i class="fas fa-arrow-right"></i></i> </button>
-			</form>
+	<h2 id="title">Digite uma palavra ou frase em inglês para traduzi-la ao português </h2>
 
+	<div class="wrapper">
+		
+		<div class="left-container-text">
+			<div class="container-text">
+				<h2>English</h2>
+				<form name = "textForm" method = "post">
+					<textarea name="Text1" cols="40" rows="5" id = "texto" name = "textMessage" placeholder="Type it..."></textarea>
+				</form>
+
+			</div>
 		</div>
-	</div>
-	
-	<div class="right-container-text">
-		<div class="container-text">
-			<section class="dialog">
-				<h2>Tradução</h2>
-				<div id="answer"></div>
-			</section>
+		<button type = "button" onclick="sendTextToTranslate();"><i class="fas fa-arrow-right"></i></i> </button>
+		
+		<div class="right-container-text">
+			<div class="container-text">
+				<section class="dialog">
+					<h2>Portuguese</h2>
+					<div id="answer">Translation...</div>
+				</section>
+			</div>
 		</div>
-	</div>
 	</div>
 </body>
 </html>

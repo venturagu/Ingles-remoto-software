@@ -14,7 +14,7 @@ function sendTextToTranslate() {
             else {
                 // exibe retorno da API e recupera o contexto para o proximo diálogo
                 console.log(returnedData);
-                answer.innerHTML = "<div>"+returnedData.data.result.translations[0].translation+" </div>";
+                answer.innerHTML = "<div style='color: Black'>"+returnedData.data.result.translations[0].translation+" </div>";
             }
         }
 
